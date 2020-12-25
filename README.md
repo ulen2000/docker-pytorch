@@ -56,8 +56,8 @@ docker run --rm -it --init \
   --gpus=all \
   --ipc=host \
   --user="$(id -u):$(id -g)" \
-  --volume="$PWD:/app" \
-  anibali/pytorch python3 main.py
+  --volume="$PWD:/root/model" \
+  27718842/weather:v3 python customize_service.py
 ```
 
 Here's a description of the Docker command-line options shown above:
